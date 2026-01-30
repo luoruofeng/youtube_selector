@@ -1,0 +1,26 @@
+qwen:
+  api_key: "sk-08e97852ea004de88eaf8cb826099058"
+  base_url: "https://dashscope.aliyuncs.com/compatible-mode/v1"
+  model: "qwen3-max"
+
+crawler:
+  batch_size: 11
+  visible: true
+  headless: false
+  min_wait_seconds: 1.0000
+  max_wait_seconds: 3.0000
+  min_video_min: 15
+  max_video_max: 70
+  min_times_of_play: 33333
+  exclude_shorts: true
+
+prompts:
+  filter_template: "下面哪些标题可能是有关于{topic}主题的，响应我一个数组(数组包含标题字符串，标题字符串不能有任何修改)，不要返回任何多余的话，直接返回数组即可，如果一个都没有就返回一个空数组([])，标题如下：{titles}"
+logging:
+  level: "INFO"
+  file_enabled: true
+  file_path: "data/app.log"
+
+output:
+  csv_dir: 'C:\Users\luoru\Desktop'
+  csv_video_count: 1
